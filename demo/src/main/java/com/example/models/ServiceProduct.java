@@ -13,14 +13,17 @@ public class ServiceProduct implements Product {
         this.durationInDays = durationInDays;
     }
 
+    @Override
     public String getName() {
         return name;
     }
 
+    @Override
     public double getPrice() {
         return price;
     }
 
+    @Override
     public String getDescription() {
         return description;
     }
