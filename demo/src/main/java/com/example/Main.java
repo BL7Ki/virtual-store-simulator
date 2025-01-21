@@ -1,5 +1,7 @@
 package com.example;
 
+import java.sql.SQLException;
+
 import com.example.dao.ProductRepository;
 import com.example.models.ServiceProduct;
 import com.example.services.ShoppingCart;
@@ -27,8 +29,7 @@ public class Main {
             // Mostrar o total do carrinho
             System.out.printf("Total: %.2f%n", cart.calculateTotal());
 
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (SQLException e) {
         }
     }
 }

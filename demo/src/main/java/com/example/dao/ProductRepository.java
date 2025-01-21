@@ -27,8 +27,8 @@ public class ProductRepository {
             statement.setDouble(2, product.getPrice());
             statement.setString(3, product.getDescription());
 
-            if (product instanceof ServiceProduct) {
-                statement.setInt(4, ((ServiceProduct) product).getDurationInDays());
+            if (product instanceof ServiceProduct serviceProduct) {
+                statement.setInt(4, serviceProduct.getDurationInDays());
             }
 
             statement.executeUpdate();
